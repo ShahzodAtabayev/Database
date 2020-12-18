@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/assetsColor"
+    tools:context=".fragments.CalendarFragment">
+
+    <CalendarView
+        android:id="@+id/calendar"
+        style="@style/Calendar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:dateTextAppearance="@style/CalenderViewDateCustomText"
+        android:focusedMonthDateColor="@color/black"
+        android:selectedWeekBackgroundColor="@color/black"
+        android:theme="@style/CalenderViewCustom"
+        android:unfocusedMonthDateColor="@color/black"
+        android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"
+        android:weekNumberColor="@color/black"
+        android:weekSeparatorLineColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnReady"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="6" />
+
+    <Button
+        android:id="@+id/btnReady"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_click_button"
+        android:text="@string/ready"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calendar"
+        app:layout_constraintVertical_weight="4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
